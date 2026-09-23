@@ -6,6 +6,15 @@
     stateVersion = "26.05";
   in
   {
+    imports = [
+      self.nixosModules.nixos-qemu-hardware
+    ];
+
+    nix.settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+
     environment.systemPackages = [
       pkgs.vim
       pkgs.firefox
@@ -54,5 +63,3 @@
 #    system.stateVersion = "${stateVersion}";
 #
 #  };
-
-}
