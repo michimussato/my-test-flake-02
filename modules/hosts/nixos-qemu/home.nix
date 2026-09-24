@@ -18,6 +18,9 @@
   flake.homeModules.nixos-module = { pkgs, ... }: {
     programs.bash.enable = true;
     programs.bash.shellAliases.ll = "ls -l";
+    programs.bash.shellAliases.tri = "tree .";
+
+    programs.fish.enable = true;
 
     home.packages = [ pkgs.hello ];
     home.stateVersion = "26.05";

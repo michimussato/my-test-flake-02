@@ -18,11 +18,13 @@
     environment.systemPackages = [
       pkgs.vim
       pkgs.firefox
+      pkgs.tree
     ];
 
     users.users.nixos = {
       isNormalUser = true;
-      shell = pkgs.fish;
+      initialPassword = "nixos";
+      shell = pkgs.bash;
     };
     home-manager.users.nixos = self.homeModules.nixos-module;
 
