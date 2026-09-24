@@ -28,10 +28,12 @@
     };
     home-manager.users.nixos-1 = self.homeModules.nixos-1-module;
 
+    # Needs to be enabled at system level
+    programs.fish.enable = true;
     users.users.nixos-2 = {
       isNormalUser = true;
       initialPassword = "nixos-2";
-      shell = pkgs.bash;
+      shell = pkgs.fish;
     };
     home-manager.users.nixos-2 = self.homeModules.nixos-2-module;
 

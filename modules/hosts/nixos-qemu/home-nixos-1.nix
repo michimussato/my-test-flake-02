@@ -18,11 +18,11 @@
   # This is your home.nix, your module where you configure home-manager
   # It's imported both in standalone configuration above, and in your nixos configuration
   flake.homeModules.nixos-1-module = { pkgs, ... }: {
-    programs.bash.enable = true;
+#    programs.bash.enable = true;
     programs.bash.shellAliases.ll = "ls -l";
     programs.bash.shellAliases.tri = "tree .";
 
-    programs.fish.enable = true;
+#    programs.fish.enable = false;
 
     home.packages = [ pkgs.hello ];
     home.stateVersion = "26.05";
