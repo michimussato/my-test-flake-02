@@ -21,12 +21,19 @@
       pkgs.tree
     ];
 
-    users.users.nixos = {
+    users.users.nixos-1 = {
       isNormalUser = true;
-      initialPassword = "nixos";
+      initialPassword = "nixos-1";
       shell = pkgs.bash;
     };
-    home-manager.users.nixos = self.homeModules.nixos-module;
+    home-manager.users.nixos-1 = self.homeModules.nixos-1-module;
+
+    users.users.nixos-2 = {
+      isNormalUser = true;
+      initialPassword = "nixos-2";
+      shell = pkgs.bash;
+    };
+    home-manager.users.nixos-2 = self.homeModules.nixos-2-module;
 
     system.stateVersion = "${stateVersion}";
   };
